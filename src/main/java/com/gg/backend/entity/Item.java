@@ -12,6 +12,7 @@ public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     @Column(length = 50, nullable = false) //varchar 50, null 허용 X
     private String name;
 
