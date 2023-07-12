@@ -9,4 +9,6 @@ public interface ItemRepository extends JpaRepository<Item, Integer> {
 
     List<Item> findByIdIn(List<Integer> ids);
 
+    Item findById(String itemId);
+
 }

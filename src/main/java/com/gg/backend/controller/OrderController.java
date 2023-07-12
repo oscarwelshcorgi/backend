@@ -45,10 +45,7 @@ public class OrderController {
 
     @Transactional
     @PostMapping("/api/orders")
-    public ResponseEntity pushOrder(
-            @RequestBody OrderDto dto,
-            @CookieValue(value = "token", required = false) String token
-    ) {
+    public ResponseEntity pushOrder( @RequestBody OrderDto dto, @CookieValue(value = "token", required = false) String token ) {
 
         if (!jwtService.isValid(token)) {
             throw new ResponseStatusException(HttpStatus.UNAUTHORIZED);
